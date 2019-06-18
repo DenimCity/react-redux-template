@@ -1,0 +1,2 @@
+export const GET_LAUNCHES = 'GET_LAUNCHES';
+export const LAUNCHES_LOADED = 'LAUNCHES_LOADED';
