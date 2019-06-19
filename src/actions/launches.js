@@ -1,16 +1,15 @@
 import axios from 'axios';
-import { LAUNCHES_LOADED } from './types';
+import { GET_LAUNCHES } from './types';
 
-const baseURl = 'https://api.spacexdata.com/v3/'
+const baseURl = 'https://api.spacexdata.com/v3'
 
-export const getLaunches = async() => (dispatch, getState) => {
+export const getLaunches = () => async (dispatch, getState) => {
       // Loading SpaceX Launches
 
-      axios.get(`${baseURl}/launches`)
+      await axios.get(`${baseURl}/launches`)
       .then(res => {
-            console.log(res.data)
             dispatch({
-                  type: LAUNCHES_LOADED,
+                  type: GET_LAUNCHES,
                   payload: res.data
             })
       })
