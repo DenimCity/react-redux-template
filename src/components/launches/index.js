@@ -6,11 +6,8 @@ import 'react-table/react-table.css';
 import { getLaunches } from '../../redux/actions/launches';
 
 const Launches = (props) =>  {
-
-
-      const { launches } = props;
-
       
+      const { launches } = props;
       useEffect(()=> {
             props.getLaunches()
       });
@@ -42,9 +39,6 @@ const Launches = (props) =>  {
                         },
                         { Header: 'Launch Year',
                         Cell: props => <div style={{ textAlign: 'center'}}> {props.original.launch_year}</div>
-                        },
-                        { Header: 'Launch Site',
-                        Cell: props => <div style={{ textAlign: 'center'}}> {props.original.launch_site.site_name}</div>
                         }
                         ]}/>
             </Fragment>
