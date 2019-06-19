@@ -10,7 +10,7 @@ export default function (state = INITIAL_STATE, action) {
             case GET_LAUNCHES: {
                   return {
                         ...state,
-                        leads: action.payload
+                        launches: action.payload
                   }
             }
             default: 
