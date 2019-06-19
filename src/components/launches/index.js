@@ -36,7 +36,7 @@ export class Launches extends Component {
                               },
                               {
                               Header: 'Details',
-                              Cell:  props => <div style={{ textAlign: 'center'}}> {props.original.details ? props.original.details : 'Details N/A'}</div>
+                              Cell:  props => <div style={{ textAlign: 'center'}}> {props.original.details && props.original.details.length > 45 ? `${props.original.details.substring(0,20)}...` : 'Details N/A'}</div>
                               },
                               { Header: 'Launch Status',
                               Cell: props => <div style={{ textAlign: 'center'}}> {props.original.launch_success ? "Successful" : "Failed Launch"}</div>
