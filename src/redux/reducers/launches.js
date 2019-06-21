@@ -2,18 +2,18 @@ import { GET_LAUNCHES } from '../actions/types';
 
 
 const INITIAL_STATE = {
-      launches: []
-}
+  launches: [],
+};
 
 export default function (state = INITIAL_STATE, action) {
-      switch (action.type) {
-            case GET_LAUNCHES: {
-                  return {
-                        ...state,
-                        launches: action.payload
-                  }
-            }
-            default: 
-            return state;
-      }
+  switch (action.type) {
+    case GET_LAUNCHES: {
+      return {
+        ...state,
+        launches: action.payload,
+      };
+    }
+    default:
+      return state;
+  }
 }
