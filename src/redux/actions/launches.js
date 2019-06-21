@@ -12,6 +12,6 @@ export const getLaunches = () => async (dispatch) => {
       });
     })
     .catch((err) => {
-      console.log(err.message);
+      throw new Error(err.message);
     });
 };
