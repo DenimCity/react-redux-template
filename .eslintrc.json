@@ -17,7 +17,8 @@
         "ecmaVersion": 2018
     },
     "plugins": [
-        "react"
+        "react",
+        "sort-imports-es6-autofix"
     ],
     "rules": {
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
